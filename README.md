@@ -43,8 +43,8 @@ const librarySchema = new Schema({
 - express, ejs, method-override, dotenv, mongoose
 
 ## schedule of what your goal is each day of project week
-Day 1: Create template and generate project idea.
-Day 2: set up models and set up create and update routes.
-Day 3: set up read and delete routes.
-Day 4: Add O Auth and create a show route for the library.
-Day 5: Work on CSS to give the website some flair.
+Day 1: Create template and generate project idea. <br>
+Day 2: set up models and set up create and update routes.<br>
+Day 3: set up read and delete routes.<br>
+Day 4: Add O Auth and create a show route for the library.<br>
+Day 5: Work on CSS to give the website some flair.<br>
