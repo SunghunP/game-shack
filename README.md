@@ -4,7 +4,7 @@ An online store full of used games! A user will be able to buy/sell games on the
 I want to be able to let the user save/favorite a game and then come back to it later. They should also be able to see all of the games they purchased in their library and all of the games that they have currently put up for sale. 
 
 ## list of intended routes
-`index: GET "/shop/" => renders index view of homepage for the shop .`
+`index: GET "/shop/" => renders index view of homepage for the shop`
 *Bonus: If the user is logged in then they will be redirected to their library instead*
 
 `new: GET "/shop/new" => renders new view of a form that allows user to post new game to marketplace`
