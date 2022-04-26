@@ -1,14 +1,14 @@
-const mongoose = require('../config/db');
+const mongoose = require('mongoose');
 
 // destructuring
 const { Schema, model } = mongoose;
 
 const gameSchema = new Schema({
 	name:	{ type: String, required: true, unique: true },
-	desc:   { type: String, required: true, default: `Description of ${this.name}`},
+	desc:   { type: String, required: true, default: `Description of ${this.name}`, maxLength: 200 },
 	img: 	{ type: String }, // will provide a blank image if none is entered
-	price: 	{ type: number, required: true, min: [0, 'The price must be greater than 0!']},
-	qty: 	{ type: number, required: true, min: [0, 'The quantity must be a positive number!']},
+	price: 	{ type: Number, required: true, min: [0, 'The price must be greater than 0!']},
+	qty: 	{ type: Number, required: true, min: [0, 'The quantity must be a positive number!']},
 	tags: 	{ type: Array }
 });
 
