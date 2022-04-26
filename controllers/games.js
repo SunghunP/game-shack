@@ -23,3 +23,15 @@ async function index(req, res) {
 	}
 };
 
+// WARNING: the seed route wil destroy all data in the database!
+async function seed(req, res) {
+	try {
+		// first delete all of the models in the database
+		await Game.deleteMany({});
+		// then push the seed data to the db 
+		Game.create(gameSeed)
+		res.redirect('/games')
+	} catch(err) {
+		res.send(err)
+	}
+}
