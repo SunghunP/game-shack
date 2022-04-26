@@ -1,4 +1,7 @@
-const mongoose = require('mongoose');
+const mongoose = require('../config/db');
+
+// destructuring
+const { Schema, model } = mongoose;
 
 const gameSchema = new Schema({
 	name:	{ type: String, required: true, unique: true },
@@ -9,4 +12,8 @@ const gameSchema = new Schema({
 	tags: 	{ type: Array }
 });
 
-module.exports = mongoose.model('Game', gameSchema);
+// store model in mongoose
+const Game = mongoose.model('Game', gameSchema)
+
+// export the model 
+module.exports = Game;

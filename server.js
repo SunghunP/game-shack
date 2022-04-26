@@ -5,6 +5,7 @@ require('dotenv').config();
 require('./config/db');
 const express = require('express');
 const methodOverride = require('method-override');
+const morgan = require('morgan')
 const app = express();
 const PORT = process.env.PORT;
 

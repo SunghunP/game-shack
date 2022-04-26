@@ -15,3 +15,5 @@ db
 	.on('connected', () => {console.log(`Connected at ${db.host}:${db.port}`)})
 	.on('disconnected', () => {console.log('Mongoose has disconnected from the Database...')})
 	.on('error', (error) => {console.log(error)});
+
+module.exports = db;
