@@ -4,15 +4,17 @@
 require('dotenv').config();
 require('./config/db');
 const express = require('express');
-const app = express();
 const methodOverride = require('method-override');
+const app = express();
 const PORT = process.env.PORT;
 
 // ----------------------------- //
 // Middleware
 // ----------------------------- //
-app.use(methodOverride('_method'));
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false})); // parses url encoded bodies
+app.use(methodOverride('_method')); // bypass route types
+app.use(express.static('public')); // create a path for public files to exist/be found 
+app.use(morgan("dev")); // log every HTTP request
 
 // ----------------------------- //
 // Routes

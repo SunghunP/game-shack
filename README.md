@@ -79,12 +79,12 @@ I want to be able to let the user save/favorite a game and then come back to it 
 Game model:
 ```
 const gameSchema = new Schema({
-	name: 		{ type: String, required: true, unique: true },
-	description:    { type: String, required: true },
-	img: 		{ type: String }, // will provide a blank image if none is entered
-	price: 		{ type: number, required: true },
-	tags: 		{[ type: String ]} // takes in an array
-	quantity: 	{ type: number, required: true }
+	name:	{ type: String, required: true, unique: true },
+	desc:   { type: String, required: true, default: `Description of ${this.name}`},
+	img: 	{ type: String }, // will provide a blank image if none is entered
+	price: 	{ type: number, required: true, min: [0, 'The price must be greater than 0!']},
+	qty: 	{ type: number, required: true, min: [0, 'The quantity must be a positive number!']},
+	tags: 	{ type: Array }
 });
 ```
 
