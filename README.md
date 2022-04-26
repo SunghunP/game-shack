@@ -88,10 +88,10 @@ const gameSchema = new Schema({
 });
 ```
 
-Library model:
+User model:
 ```
-const librarySchema = new Schema({
-	games: [gameSchema]
+const userSchema = new Schema({
+	library: [gameSchema]
 });
 ```
 
