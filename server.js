@@ -23,6 +23,10 @@ app.use(morgan("dev")); // log every HTTP request
 const indexRouter = require('./routes/index');
 const gameRouter = require('./routes/games.js');
 
+app.use('/', indexRouter);
+app.use('/games', gameRouter);
+
+// listener
 app.listen(PORT, () => {
 	console.log('Server has started on PORT: ', PORT);
 });
