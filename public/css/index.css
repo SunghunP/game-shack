@@ -1,0 +1,104 @@
+/* --------------------- */
+/* index page css */
+/* --------------------- */
+:root {
+	--color-base: #fcf6f6;
+	--nav-bg: #2C3540; 
+	--nav-accent2: #D9D6B0; 
+	--nav-font: #D9C14A;
+	--nav-accent: #cc9137;
+	--color4: #8C4A0F; 
+	--color5: #0D0D0D; 
+}
+
+* {
+	font-family: 'Source Serif Pro', serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	height: auto;
+	width: 100vw;
+}
+
+#index-body {
+	background-image: url('https://i.imgur.com/PFHSwNF.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: var(--color-base);
+}
+
+/* ----------------------------- */
+/* flex styles */
+/* ----------------------------- */
+.flex-cntr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-cntr.col {
+	flex-direction: column;
+}
+
+/* --------------------- */
+/* nav bar css */
+/* --------------------- */
+header {
+	background-color: var(--nav-bg);
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	color: var(--nav-font);
+}
+
+nav {
+	width: 100%;
+}
+
+nav h1 {
+	white-space: nowrap;
+	flex: auto;
+	width: max-content;
+	font-size: 50px;
+	text-align: left;
+	margin: 20px;
+	flex-wrap: nowrap;
+}
+
+.nav-links {
+	flex: auto;
+	justify-content: flex-end;
+}
+
+.nav-links a {
+	font-size: 30px;
+	text-decoration: none;
+	margin-right: 10px;
+	padding: 15px;
+	color: var(--nav-font);
+}
+
+.nav-links div {
+	text-decoration: none;
+}
+
+#top-nav {
+	justify-content: space-between;
+}
+
+/* --------------------- */
+/* content-wrapper css */
+/* --------------------- */
+.content-wrapper {
+	margin: auto;
+	margin-top: 15%;
+}
+.content-wrapper p {
+	font-size: 40px;
+	margin: auto;
+	text-align: center;
+}
