@@ -81,9 +81,9 @@ Game model:
 const gameSchema = new Schema({
 	name: 		{ type: String, required: true, unique: true },
 	description:    { type: String, required: true },
-	img: 		{ type: String },
+	img: 		{ type: String }, // will provide a blank image if none is entered
 	price: 		{ type: number, required: true },
-	tags: 		{ type: String } // will have to splice the string to create an array of multiple tags for use later on. 
+	tags: 		{[ type: String ]} // takes in an array
 	quantity: 	{ type: number, required: true }
 });
 ```
