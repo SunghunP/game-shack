@@ -2,7 +2,7 @@
 // Dependencies
 // ----------------------------- //
 require('dotenv').config();
-require('./config/db/');
+require('./config/db');
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended:false}));
 // Routes
 // ----------------------------- //
 const indexRouter = require('./routes/index');
-const gameRouter = require('./routes/game.js');
+const gameRouter = require('./routes/games.js');
 
 app.listen(PORT, () => {
 	console.log('Server has started on PORT: ', PORT);
