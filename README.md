@@ -8,12 +8,12 @@ Game Shack is an e-commerce selling/buying website for games with full CRUD func
 3. [Project Idea](#project-idea)
 
 ## General Info
-### Technologies used
+### Technologies used:
 - HTML
 - CSS
 - JavaScript
 
-### Express Libraries used
+### Express Libraries used:
 - dotenv: "^16.0.0",
 - ejs: "^3.1.7",
 - express: "^4.17.3",
@@ -22,7 +22,7 @@ Game Shack is an e-commerce selling/buying website for games with full CRUD func
 - morgan: "^1.10.0"
 
 ## Getting started
-### Installation
+### Installation:
 To download this repository and start the server:
 ```
 $ git clone https://github.com/SunghunP/game-shack
@@ -31,15 +31,30 @@ $ npm install
 $ npm start
 ```
 
-### Contributing
+### Contributing:
 1. Fork it!
-2. Create your own branch: `git checkout -b my-new-feature`
+2. Create your own branch: `git checkout -b my-new-branch`
 3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
+4. Push to the branch: `git push origin my-new-branch`
 5. Submit a pull request! 
 
 ## Project idea
 An online store full of used games! A user will be able to buy/sell games on the marketplace and add them to their library of games. 
+
+
+### Wireframes and ERD:
+ERD: <br/>
+<img src="https://i.imgur.com/rWumEFC.png" alt="ERD" width="700px"/>
+
+Wireframes of the inteded pages:
+Welcome Page:<br/>
+<img src="https://i.imgur.com/TSXHwYX.png" alt="welcome" width="700px"/><br/>
+Index Page:<br/>
+<img src="https://i.imgur.com/Jcmt7SO.png" alt="Index" width="700px"/><br/>
+Show Page:<br/>
+<img src="https://i.imgur.com/wFd1MRs.png" alt="show" width="700px"/><br/>
+Form Page:<br/>
+<img src="https://i.imgur.com/kEnw0Vu.png" alt="from" width="700px"/><br/>
 
 ### Past MVP:
 I want to be able to let the user save/favorite a game and then come back to it later. They should also be able to see all of the games they purchased in their library and all of the games that they have currently put up for sale. 
@@ -86,3 +101,7 @@ Day 2: set up models and set up create and update routes.<br>
 Day 3: set up read and delete routes.<br>
 Day 4: Add O Auth and create a show route for the library.<br>
 Day 5: Work on CSS to give the website some flair.<br>
+
+### Work-Flow
+Here is a link to my Trello Board with my work flow.
+https://trello.com/b/hwYaTDf4/game-store
