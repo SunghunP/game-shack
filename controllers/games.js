@@ -12,14 +12,15 @@ module.exports = {
 	// delete: deleteGame,
 };
 
+// GET the index page of the games
 async function index(req, res) {
 	try {
 		let gameDocuments = await Game.find({});
-		res.render('game_index.ejs', {
+		res.render('./games/game_index.ejs', {
 			games: gameDocuments
 		});
 	} catch(err) {
-		res.send(err)
+		res.send(err);
 	}
 };
 
@@ -29,9 +30,9 @@ async function seed(req, res) {
 		// first delete all of the models in the database
 		await Game.deleteMany({});
 		// then push the seed data to the db 
-		Game.create(gameSeed)
-		res.redirect('/games')
+		await Game.create(gameSeed)
+		res.redirect('/games');
 	} catch(err) {
-		res.send(err)
+		res.send(err);
 	}
 }

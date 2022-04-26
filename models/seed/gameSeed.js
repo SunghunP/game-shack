@@ -1,6 +1,6 @@
 module.exports = [
 	{
-		name: "Bean",
+		name: "Batman",
 		desc: "A bean",
 		img: "https://dummyimage.com/300x200/5c3f2f/000000.png&text=Bean",
 		price: 5.99,

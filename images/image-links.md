@@ -3,7 +3,7 @@ Here is a collection of the links to where the images are stored.
 
 [logo](https://imgur.com/a/LwPWeev) [Image Address](https://i.imgur.com/LNADoYI.png)
 
-[erd](https://imgur.com/a/4h2otNl) [Image Address](https://i.imgur.com/rWumEFC.png)
+[ERD](https://imgur.com/a/4h2otNl) [Image Address](https://i.imgur.com/rWumEFC.png)
 
 [welcome page WF](https://imgur.com/a/AyZPa2q) [Image Address](https://i.imgur.com/TSXHwYX.png)
 
