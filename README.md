@@ -19,6 +19,7 @@ Games Index <br/>
 - HTML
 - CSS
 - JavaScript
+- EJS
 
 ### Express Libraries used:
 - dotenv: "^16.0.0",
