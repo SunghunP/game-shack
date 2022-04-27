@@ -15,4 +15,6 @@ Here is a collection of the links to where the images are stored.
 
 [index page WF](https://imgur.com/a/9hlUqB1) [Image Address](https://i.imgur.com/Jcmt7SO.png)
 
-[Index page](https://imgur.com/a/RDlplgr) [Image Address](https://i.imgur.com/vcdaMlm.jpg)
+[Games Index page](https://imgur.com/a/RDlplgr) [Image Address](https://i.imgur.com/vcdaMlm.jpg)
+
+[Welcome Page](https://imgur.com/a/Of6cti1) [Image Address](https://i.imgur.com/YKebfGv.png)
