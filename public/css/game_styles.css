@@ -218,6 +218,7 @@ input.qty-counter {
 	margin: 3px;
 	font-size: 25px;
 	width: 100px;
+	text-align: center;
 }
 
 input[type=number]::-webkit-outer-spin-button,
