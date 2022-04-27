@@ -7,7 +7,7 @@ router.get('/seed', gameCtrl.seed);
 router.get('/new', gameCtrl.new);
 router.get('/:id/edit', gameCtrl.edit);
 router.get('/:id', gameCtrl.show);
-// router.put('/:id', gameCtrl.update);
+router.put('/:id', gameCtrl.update);
 router.post('/', gameCtrl.create);
 // router.delete('/:id', gameCtrl.delete);
 

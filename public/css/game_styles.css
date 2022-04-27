@@ -178,7 +178,6 @@ div.text-cntr.flex-cntr {
 }
 
 .text-cntr-show {
-	width: 100%;
 	flex: 1;
 	margin-left: 25px;
 	padding: 10px;
@@ -205,6 +204,10 @@ div.text-cntr.flex-cntr {
 	align-items: center;
 	white-space: nowrap;
 }
+.routes-button-cntr form, .routes-button-cntr a {
+	margin: auto 5px;
+}
+
 
 button {
 	margin: 3px;
@@ -215,10 +218,11 @@ button {
 input.qty-counter {
 	border: none;
 	outline: none;
-	margin: 3px;
+	margin: 5px;
 	font-size: 25px;
 	width: 100px;
 	text-align: center;
+	height: 37px;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -289,5 +293,9 @@ body div form.new-product-form {
 @media (max-width: 1100px) {
 	div.game-cntr-show {
 		flex-direction: column;
+	}
+
+	.text-cntr-show {
+		margin: auto;
 	}
 }

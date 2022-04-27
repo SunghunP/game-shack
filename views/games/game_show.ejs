@@ -22,7 +22,7 @@
 				<div class="buy-btn-cntr flex-cntr" >
 					<input type="hidden" name="gameQty" value="<%= game.qty %>" />
 					<button type="button" class="minus-btn">-</button>
-					<input name="qty" value="0" class="qty-counter" type="number" style="-webkit-appearance: none; margin: 0; -moz-appearance: textfield;" />
+					<input name="qty" value="0" class="qty-counter" type="number" style="-webkit-appearance: none; -moz-appearance: textfield;" />
 					<button type="button" class="add-btn">+</button>
 				</div>
 				<% if (game.qty === 0) { %>
@@ -34,7 +34,9 @@
 		</div>
 		<div class="routes-button-cntr flex-cntr">
 			<a href="/games/<%= game._id %>/edit"><button>Update this product</button></a>
-			<button>Delete this product</button>
+			<form action="/games" >
+				<button type="submit">Delete this product</button>
+			</form>
 		</div>
 	</div>
 </body>

@@ -9,7 +9,7 @@ module.exports = {
 	create,
 	show,
 	edit,
-	// update,
+	update,
 	// delete: deleteGame,
 };
 
@@ -47,13 +47,7 @@ async function newGame(req, res) {
 };
 
 async function create(req, res) {
-	// get tags from req.body to validate and clean data
-	let tagString = req.body.tags;
-	// replace all white spaces with blank string
-	tagString = tagString.replace(/\s/g,'');
-	// create an array by splitting the string by ,
-	const tags = tagString.split(',');
-	req.body.tags = tags;
+	req.body.tags = trimWhiteSpaceAndSplit(req.body.tags);
 	try {
 		let game = await Game.create(req.body);
 		res.redirect(`/games/${game._id}`);
@@ -78,4 +72,23 @@ async function edit(req, res) {
 	} catch(err) {
 		res.send(err);
 	}
+};
+
+async function update(req, res) {
+	req.body.tags = trimWhiteSpaceAndSplit(req.body.tags);
+	try {
+		await Game.findByIdAndUpdate(req.params.id, req.body);
+		res.redirect(`/games/${req.params.id}`);
+	} catch(err) {
+		res.send(err);
+	}
+}
+
+function trimWhiteSpaceAndSplit(str) {
+	// get tags from req.body to validate and clean data
+	let tagString = str
+	// replace all white spaces with blank string
+	tagString = tagString.replace(/\s/g,'');
+	// create an array by splitting the string by ,
+	return tagString.split(',');
 };
