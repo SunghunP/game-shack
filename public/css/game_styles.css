@@ -121,12 +121,13 @@ nav div.selected {
 
 .game-cntr {
 	max-width: 250px;
-    height: 400px;
+    height: 500px;
     margin: 25px;
     padding: 10px;
     outline: solid var(--accent2) 5px;
     border: solid var(--nav-font) 3px;
 	justify-content: space-around;
+	align-items: center;
 }
 
 img {
@@ -140,14 +141,21 @@ img {
 	padding: 10px;
 	object-fit: cover;
 	align-items: center;
+	flex: 1;
+	display: flex;
 }
 
 div.text-cntr.flex-cntr {
-	border-top: solid 2px var(--accent);
 	padding: 10px;
 	/* justify-content: flex-end; */
 	flex: 1;
 	text-align: center;
+	justify-content: flex-end;
+}
+
+.name-cntr {
+	padding-top: 20px;
+	border-top: solid 2px var(--accent);
 }
 
 /* --------------------- */
