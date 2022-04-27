@@ -75,6 +75,7 @@ nav h1 a {
 
 .nav-links {
 	flex: auto;
+	flex-direction: row;
 	justify-content: flex-end;
 }
 
@@ -98,6 +99,10 @@ nav div.selected {
 	visibility: hidden;
 }
 
+.logo {
+	display: none;
+}
+
 /* --------------------- */
 /* content-wrapper css */
 /* --------------------- */
@@ -115,18 +120,18 @@ nav div.selected {
 }
 
 .game-cntr {
-	max-width: 300px;
+	max-width: 250px;
     height: 400px;
     margin: 25px;
     padding: 10px;
-    outline: solid var(--accent3) 2px;
+    outline: solid var(--accent2) 5px;
     border: solid var(--nav-font) 3px;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 
 img {
 	max-width: 225px;
-	max-height: auto;
+	max-height: 225px;
 }
 
 .img-cntr, img-cntr.img {
@@ -142,6 +147,7 @@ div.text-cntr.flex-cntr {
 	padding: 10px;
 	/* justify-content: flex-end; */
 	flex: 1;
+	text-align: center;
 }
 
 /* --------------------- */
@@ -158,7 +164,7 @@ div.text-cntr.flex-cntr {
     height: auto;
     margin: 10px;
     padding: 20px;
-    outline: solid var(--accent3) 2px;
+    outline: solid var(--accent2) 5px;
     border: solid var(--nav-font) 3px;
     justify-content: space-around;
     max-width: max-content;
@@ -167,23 +173,73 @@ div.text-cntr.flex-cntr {
 .text-cntr-show {
 	width: 100%;
 	flex: 1;
+	margin-left: 25px;
+	padding: 10px;
 }
 
+.name-cntr, .desc-cntr, .qty-cntr, .price-cntr, .tag-cntr {
+	justify-content: flex-start;
+	width: 100%;
+	margin: 10px;
+}
 
+/* --------------------- */
+/* purchaser css */
+/* --------------------- */
 
+.purchaser, .routes-button-cntr {
+	margin: 10px auto;
+}
 
+.routes-button-cntr {
+	justify-content: space-around;
+	align-items: center;
+	white-space: nowrap;
+}
+
+button {
+	margin: 3px;
+	width: 100%;
+	font-size: 25px;
+}
+
+input.qty-counter {
+	border: none;
+	outline: none;
+	margin: 3px;
+	font-size: 25px;
+	width: 100px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
 
 /* tried to do a drop down menu */
 /* @media (max-width: 960px) {
-	nav div.nav-links { visibility: hidden; }
+	nav div.nav-links {
+		flex-direction: column; 
+		display: none;
+	}
 
-	nav div.selected { visibility: visible; }
+	div.logo {
+		display: flex;
+		height: 65px;
+	}
 
-	select {
-		background-color: var(--accent);
-		color: var(--color5);
-		border: none;
-		width: 50px;
-		height: 40px;
+	div.logo:hover + .nav-links {
+		display: none;
 	}
 } */
+
+@media (max-width: 1100px) {
+	div.game-cntr-show {
+		flex-direction: column;
+	}
+}

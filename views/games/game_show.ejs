@@ -4,7 +4,7 @@
 
 <body id="index-body">
 	<%- include("partials/header.ejs") %> 
-	<div class="content-wrapper show flex-cntr">
+	<div class="content-wrapper show flex-cntr col">
 		<div class="game-cntr-show flex-cntr">
 			<div class="img-cntr">
 				<a href="/games/<%= game._id %>"><img src="<%= game.img %>" alt="Image of <%= game.name %>"></a>
@@ -16,6 +16,19 @@
 				<div class="qty-cntr">Quantity: <%= game.qty %> </div>
 				<div class="tag-cntr">Tags: <%= game.tags %> </div>
 			</div>
+		</div>
+		<div class="purchaser flex-cntr" >
+			<div class="buy-btn-cntr flex-cntr">
+				<input type="hidden" name="productQty" value="<%= game.qty %>" />
+				<button class="minus-btn">-</button>
+				<input default="0" class="qty-counter" type="number" style="-webkit-appearance: none; margin: 0; -moz-appearance: textfield;" />
+				<button class="add-btn">+</button>
+			</div>
+			<button>Purchase</button>
+		</div>
+		<div class="routes-button-cntr flex-cntr">
+			<button>Update this product</button>
+			<button>Delete this product</button>
 		</div>
 	</div>
 </body>
