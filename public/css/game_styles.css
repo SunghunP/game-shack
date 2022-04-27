@@ -121,8 +121,8 @@ nav div.selected {
 }
 
 .game-cntr {
-	max-width: 250px;
-    height: 500px;
+	width: 250px;
+    height: 400px;
     margin: 25px;
     padding: 10px;
     outline: solid var(--accent2) 5px;
@@ -140,16 +140,14 @@ img {
 	max-height: 235px;
 	width: auto;
 	padding: 10px;
-	object-fit: cover;
+	object-fit: contain;
 	align-items: center;
-	flex: 1;
 	display: flex;
 }
 
 div.text-cntr.flex-cntr {
 	padding: 10px;
 	/* justify-content: flex-end; */
-	flex: 1;
 	text-align: center;
 	justify-content: flex-end;
 }
@@ -185,11 +183,14 @@ div.text-cntr.flex-cntr {
 	margin-left: 25px;
 	padding: 10px;
 }
+.name-cntr h1 {
+	margin: 10px auto;
+}
 
 .name-cntr, .desc-cntr, .qty-cntr, .price-cntr, .tag-cntr {
 	justify-content: flex-start;
 	width: 100%;
-	margin: 10px;
+	margin: 5px;
 }
 
 /* --------------------- */
