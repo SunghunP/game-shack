@@ -8,6 +8,13 @@ Game Shack is an e-commerce selling/buying website for games with full CRUD func
 3. [Project Idea](#project-idea)
 
 ## General Info
+### Screen shots of the website
+Welcome Page <br/>
+<img src="https://i.imgur.com/YKebfGv.png" alt="ERD" width="700px"/> <br/>
+
+Games Index <br/>
+<img src="https://i.imgur.com/vcdaMlm.jpg" alt="ERD" width="700px"/> <br/>
+
 ### Technologies used:
 - HTML
 - CSS
