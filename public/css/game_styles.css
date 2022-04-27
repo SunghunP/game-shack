@@ -232,11 +232,11 @@ input[type=number] {
 /* --------------------- */
 /* new form css */
 /* --------------------- */
-
 form h3 {
 	text-align: center;
 	white-space: nowrap;
 }
+
 body div form.new-product-form {
 	border: solid 10px var(--nav-border-color);
 	width: 30%;
@@ -261,6 +261,11 @@ body div form.new-product-form {
 
 .new-form-submit-btn {
 	margin: 10px auto;
+}
+
+.minus-btn, .add-btn {
+	width: 40px;
+	height: 40px;
 }
 /* tried to do a drop down menu */
 /* @media (max-width: 960px) {

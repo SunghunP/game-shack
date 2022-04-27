@@ -18,14 +18,18 @@
 			</div>
 		</div>
 		<div class="purchaser flex-cntr" >
-			<form>
+			<form action="/games" method="PUT" class="flex-cntr col">
 				<div class="buy-btn-cntr flex-cntr" >
-					<input type="hidden" name="productQty" value="<%= game.qty %>" />
+					<input type="hidden" name="gameQty" value="<%= game.qty %>" />
 					<button type="button" class="minus-btn">-</button>
-					<input default="0" class="qty-counter" type="number" style="-webkit-appearance: none; margin: 0; -moz-appearance: textfield;" />
+					<input name="qty" default="0" class="qty-counter" type="number" style="-webkit-appearance: none; margin: 0; -moz-appearance: textfield;" />
 					<button type="button" class="add-btn">+</button>
 				</div>
-				<button type="submit" >Purchase</button>
+				<% if (game.qty === 0) { %>
+					<button class="buy-button" type="submit" style="background-color: red;color: black;" disabled>OUT OF STOCK</button>
+				<% } else { %>
+					<button class="buy-button" type="submit" >Purchase</button>
+				<% } %>
 			</form>
 		</div>
 		<div class="routes-button-cntr flex-cntr">
