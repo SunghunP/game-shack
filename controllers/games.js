@@ -6,7 +6,7 @@ module.exports = {
 	index,
 	seed,
 	new: newGame,
-	// create,
+	create,
 	show,
 	// edit,
 	// update,
@@ -31,7 +31,7 @@ async function seed(req, res) {
 		// first delete all of the models in the database
 		await Game.deleteMany({});
 		// then push the seed data to the db 
-		await Game.create(gameSeed)
+		await Game.create(gameSeed);
 		res.redirect('/games');
 	} catch(err) {
 		res.send(err);
@@ -40,14 +40,26 @@ async function seed(req, res) {
 
 async function newGame(req, res) {
 	try {
-		await res.render('./games/game_new.ejs')
+		await res.render('./games/game_new.ejs');
+	} catch(err) {
+		res.send(err);
+	};
+};
+
+async function create(req, res) {
+	// get tags from req.body to validate and clean data
+	let tagString = req.body.tags;
+	// replace all white spaces with blank string
+	tagString = tagString.replace(/\s/g,'')
+	// create an array by splitting the string by ,
+	const tags = tagString.split(',') ;
+	req.body.tags = tags
+	try {
+		let game = await Game.create(req.body);
+		res.redirect(`/games/${game._id}`)
 	} catch(err) {
 		res.send(err)
 	}
-}
-
-async function create() {
-
 }
 
 async function show(req, res) {
