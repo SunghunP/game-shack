@@ -75,13 +75,34 @@ async function edit(req, res) {
 };
 
 async function update(req, res) {
-	req.body.tags = trimWhiteSpaceAndSplit(req.body.tags);
-	try {
-		await Game.findByIdAndUpdate(req.params.id, req.body);
-		res.redirect(`/games/${req.params.id}`);
-	} catch(err) {
-		res.send(err);
+	console.log(req.body);
+	const id = req.params.id;
+	const finalQty = parseInt(req.body.gameQty) - parseInt(req.body.qty);
+	// check to see if the body has 2 key:value pairs
+	if (Object.keys(req.body).length === 2) {
+		try {
+			Game.findByIdAndUpdate(
+				id,
+				{ 'qty': finalQty },
+				(err, updatedGame) => {
+					res.redirect(`/games/${id}`);
+				}
+			);
+		} catch(err) {
+			res.send(err)
+		}
+	} else {
+		try {
+			if (!req.body.img) req.body.img = '../public/images/no_Img.png';
+			req.body.tags = trimWhiteSpaceAndSplit(req.body.tags);
+			await Game.findByIdAndUpdate(req.params.id, req.body);
+			res.redirect(`/games/${req.params.id}`);
+		} catch(err) {
+			res.send(err);
+		}
 	}
+
+
 };
 
 async function deleteGame(req, res) {

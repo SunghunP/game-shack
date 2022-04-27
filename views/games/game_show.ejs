@@ -18,9 +18,9 @@
 			</div>
 		</div>
 		<div class="purchaser flex-cntr" >
-			<form action="/games" method="PUT" class="flex-cntr col">
+			<form class="flex-cntr col buy-form" action="/games/<%= game._id %>?_method=PUT" method="POST">
 				<div class="buy-btn-cntr flex-cntr" >
-					<input type="hidden" name="gameQty" value="<%= game.qty %>" />
+					<input class="game-qty-cntr" type="hidden" name="gameQty" value="<%= game.qty %>" />
 					<button type="button" class="minus-btn">-</button>
 					<input name="qty" value="0" class="qty-counter" type="number" style="-webkit-appearance: none; -moz-appearance: textfield;" />
 					<button type="button" class="add-btn">+</button>
