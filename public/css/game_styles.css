@@ -4,11 +4,11 @@
 :root {
 	--color-base: #fcf6f6;
 	--bg: #2C3540; 
-	--accent2: #D9D6B0; 
+	--accent: #D9D6B0; 
 	--nav-font: #D9C14A;
-	--accent: #cc9137;
-	--color4: #8C4A0F; 
-	--color5: #0D0D0D; 
+	--accent2: #cc9137;
+	--accent3: #8C4A0F; 
+	--border-color: #0D0D0D; 
 }
 
 * {
@@ -106,14 +106,35 @@ nav div.selected {
 /* game container css */
 /* --------------------- */
 .games {
-	margin: 0px auto;
+	margin: 20px auto;
 	flex-wrap: wrap;
 }
 
 .game-cntr {
-	margin: 20px;
+	width: 230px;
+    height: 350px;
+    margin: 10px;
+    padding: 10px;
+    outline: solid var(--accent3) 2px;
+    border: solid var(--nav-font) 3px;
+	justify-content: space-evenly;
 }
 
+img {
+	max-width: 230px;
+	max-height: 300px;
+}
+
+.img-cntr, img-cntr.img {
+	width: auto;
+}
+
+div.text-cntr.flex-cntr {
+	border-top: solid 2px var(--accent);
+	padding: 10px;
+	/* justify-content: flex-end; */
+	flex: 1;
+}
 /* @media (max-width: 960px) {
 	nav div.nav-links { visibility: hidden; }
 
