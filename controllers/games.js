@@ -10,7 +10,7 @@ module.exports = {
 	show,
 	edit,
 	update,
-	// delete: deleteGame,
+	delete: deleteGame,
 };
 
 // GET the index page of the games
@@ -36,7 +36,7 @@ async function seed(req, res) {
 	} catch(err) {
 		res.send(err);
 	}
-}
+};
 
 async function newGame(req, res) {
 	try {
@@ -82,11 +82,20 @@ async function update(req, res) {
 	} catch(err) {
 		res.send(err);
 	}
-}
+};
+
+async function deleteGame(req, res) {
+	try {
+		await Game.findByIdAndDelete(req.params.id);
+		res.redirect('/games')
+	} catch(err) {
+		res.send(err)
+	}
+};
 
 function trimWhiteSpaceAndSplit(str) {
 	// get tags from req.body to validate and clean data
-	let tagString = str
+	let tagString = str;
 	// replace all white spaces with blank string
 	tagString = tagString.replace(/\s/g,'');
 	// create an array by splitting the string by ,

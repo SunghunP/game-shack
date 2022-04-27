@@ -9,6 +9,6 @@ router.get('/:id/edit', gameCtrl.edit);
 router.get('/:id', gameCtrl.show);
 router.put('/:id', gameCtrl.update);
 router.post('/', gameCtrl.create);
-// router.delete('/:id', gameCtrl.delete);
+router.delete('/:id', gameCtrl.delete);
 
 module.exports = router;

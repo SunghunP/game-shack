@@ -34,7 +34,7 @@
 		</div>
 		<div class="routes-button-cntr flex-cntr">
 			<a href="/games/<%= game._id %>/edit"><button>Update this product</button></a>
-			<form action="/games" >
+			<form action="/games/<%= game._id %>/?_method=DELETE" method="POST">
 				<button type="submit">Delete this product</button>
 			</form>
 		</div>
