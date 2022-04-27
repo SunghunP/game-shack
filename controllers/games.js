@@ -1,10 +1,11 @@
+const res = require('express/lib/response');
 const Game = require('../models/games');
 const gameSeed = require('../models/seed/gameSeed');
 
 module.exports = {
 	index,
 	seed,
-	// new: newGame,
+	new: newGame,
 	// create,
 	show,
 	// edit,
@@ -37,8 +38,17 @@ async function seed(req, res) {
 	}
 }
 
-// async function new
-// async function create
+async function newGame(req, res) {
+	try {
+		await res.render('./games/game_new.ejs')
+	} catch(err) {
+		res.send(err)
+	}
+}
+
+async function create() {
+
+}
 
 async function show(req, res) {
 	try {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head.ejs") %> 
+
+<body id="index-body">
+	<%- include("partials/header.ejs") %> 
+	<div class="flex-cntr">
+		<h1>Create a New Product</h1>
+	</div>
+	<div class="content-wrapper flex-cntr">
+		<div class="form-cntr flex-cntr">
+			<form class="new-product-form flex-cntr col" action="/games/" method="POST">
+				<h3>Please fill out all of the fields </h3>
+				<div class="form-child form-name flex-cntr">
+					<label class="form-label" for="name">Name: </label>
+					<input class="form-right" name="name" required/>
+				</div>
+
+				<div class="form-child form-description flex-cntr flex-cntr">
+					<label class="form-label" for="description">Description: </label>
+					<input class="form-right" name="description" required/>
+				</div>
+
+				<div class="form-child form-img flex-cntr flex-cntr">
+					<label class="form-label" for="img">Image Link: </label>
+					<input class="form-right" name="img" />
+				</div>
+
+				<div class="form-child form-price flex-cntr flex-cntr">
+					<label class="form-label" for="price">Price: </label>
+					<input class="form-right" name="price" step="0.01" type=number required/>
+				</div>
+
+				<div class="form-child form-qty flex-cntr flex-cntr">
+					<label class="form-label" for="qty">Quantity: </label>
+					<input class="form-right" name="qty" type="number" required/>
+				</div>
+
+				<div class="form-child form-qty flex-cntr flex-cntr">
+					<label class="form-label" for="tags">Tags: </label>
+					<input class="form-right" name="tags" placeholder="separate tags with commas ','" />
+				</div>
+				<button class="new-form-submit-btn" type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
