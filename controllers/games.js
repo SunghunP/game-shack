@@ -6,7 +6,7 @@ module.exports = {
 	seed,
 	// new: newGame,
 	// create,
-	// show,
+	show,
 	// edit,
 	// update,
 	// delete: deleteGame,
@@ -34,5 +34,17 @@ async function seed(req, res) {
 		res.redirect('/games');
 	} catch(err) {
 		res.send(err);
+	}
+}
+
+// async function new
+// async function create
+
+async function show(req, res) {
+	try {
+		let foundGame = await Game.findById(req.params.id);
+		res.render('./games/game_show.ejs', {game : foundGame});
+	} catch(err) {
+		res.send(err)
 	}
 }

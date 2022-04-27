@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include("./partials/head.ejs") %> 
+
+<body id="index-body">
+	<%- include("partials/header.ejs") %> 
+	<div class="content-wrapper show flex-cntr">
+		<div class="game-cntr-show flex-cntr">
+			<div class="img-cntr">
+				<a href="/games/<%= game._id %>"><img src="<%= game.img %>" alt="Image of <%= game.name %>"></a>
+			</div>
+			<div class="text-cntr-show flex-cntr col">
+				<div class="name-cntr"><%= game.name %> </div>
+				<div class="desc-cntr"><%= game.desc %> </div>
+				<div class="price-cntr">Price: <%= game.price %> </div>
+				<div class="qty-cntr">Quantity: <%= game.qty %> </div>
+				<div class="tag-cntr">Tags: <%= game.tags %> </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
