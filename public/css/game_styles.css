@@ -177,7 +177,7 @@ div.text-cntr.flex-cntr {
 }
 
 .game-cntr-show {
-	background-color: var(--bg-op);
+	background-color: var(--border-color-op);
 	width: 100%;
     height: auto;
     margin: 10px;
