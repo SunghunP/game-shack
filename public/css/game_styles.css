@@ -4,6 +4,7 @@
 :root {
 	--color-base: #fcf6f6;
 	--bg: #2C3540; 
+	--bg-op: rgb(44, 53, 64, 0.4); 
 	--accent: #D9D6B0; 
 	--nav-font: #D9C14A;
 	--accent2: #cc9137;
@@ -121,6 +122,7 @@ nav div.selected {
 }
 
 .game-cntr {
+	background-color: var(--bg-op);
 	width: 250px;
     height: 400px;
     margin: 25px;
@@ -129,6 +131,13 @@ nav div.selected {
     border: solid var(--nav-font) 3px;
 	justify-content: space-around;
 	align-items: center;
+	transition: all 0.25s 0s ease-in-out;
+}
+
+.game-cntr:hover {
+	transform: scale(1.1, 1.1);
+	background-color: var(--bg);
+	text-decoration: none;
 }
 
 img {
@@ -167,6 +176,7 @@ div.text-cntr.flex-cntr {
 }
 
 .game-cntr-show {
+	background-color: var(--bg-op);
 	width: 100%;
     height: auto;
     margin: 10px;
