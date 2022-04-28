@@ -123,7 +123,7 @@ nav div.selected {
 }
 
 .game-cntr {
-	background-color: var(--border-color-op);
+	background-color: var(--bg-op);
 	width: 250px;
     height: 400px;
     margin: 25px;
@@ -132,12 +132,12 @@ nav div.selected {
     border: solid var(--nav-font) 3px;
 	justify-content: space-around;
 	align-items: center;
-	transition: all 0.25s 0s ease-in-out;
+	transition: all .3s 0s ease-in-out;
 }
 
 .game-cntr:hover {
-	transform: scale(1.0, 1.0);
-	background-color: var(--bg-op);
+	transform: scale(1.01, 1.01);
+	background-color: var(--border-color-op);
 	text-decoration: none;
 }
 
