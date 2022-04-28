@@ -93,7 +93,7 @@ async function update(req, res) {
 		}
 	} else {
 		try {
-			if (!req.body.img) req.body.img = '../public/images/no_Img.png';
+			if (!req.body.img) req.body.img = '/no_Img.png';
 			req.body.tags = trimWhiteSpaceAndSplit(req.body.tags);
 			await Game.findByIdAndUpdate(req.params.id, req.body);
 			res.redirect(`/games/${req.params.id}`);
