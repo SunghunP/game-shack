@@ -4,12 +4,13 @@
 :root {
 	--color-base: #fcf6f6;
 	--bg: #2C3540; 
-	--bg-op: rgb(44, 53, 64, 0.4); 
+	--bg-op: rgb(44, 53, 64, 0.9); 
 	--accent: #D9D6B0; 
 	--nav-font: #D9C14A;
 	--accent2: #cc9137;
 	--accent3: #8C4A0F; 
 	--border-color: #0D0D0D; 
+	--border-color-op: rgb(13, 13, 13, 0.4); 
 }
 
 * {
@@ -122,7 +123,7 @@ nav div.selected {
 }
 
 .game-cntr {
-	background-color: var(--bg-op);
+	background-color: var(--border-color-op);
 	width: 250px;
     height: 400px;
     margin: 25px;
@@ -136,7 +137,7 @@ nav div.selected {
 
 .game-cntr:hover {
 	transform: scale(1.0, 1.0);
-	background-color: var(--bg);
+	background-color: var(--bg-op);
 	text-decoration: none;
 }
 
