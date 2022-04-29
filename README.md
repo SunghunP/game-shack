@@ -6,6 +6,7 @@ Game Shack is an e-commerce selling/buying website for games with full CRUD func
 1. [General Info](#general-info)
 2. [Getting Started](#getting-started) 
 3. [Project Idea](#project-idea)
+4. [Updates](#updates)
 
 ## General Info
 ### Website Link
@@ -57,7 +58,7 @@ An online store full of used games! A user will be able to buy/sell games on the
 ERD: <br/>
 <img src="https://i.imgur.com/rWumEFC.png" alt="ERD" width="700px"/>
 
-Wireframes of the inteded pages:
+Wireframes of the Intended pages:
 Welcome Page:<br/>
 <img src="https://i.imgur.com/TSXHwYX.png" alt="welcome" width="700px"/><br/>
 Index Page:<br/>
@@ -106,13 +107,10 @@ const userSchema = new Schema({
 });
 ```
 
-### Schedule of my Goals
-Day 1: Create template and generate project idea. <br>
-Day 2: set up models and set up create and update routes.<br>
-Day 3: set up read and delete routes.<br>
-Day 4: Add O Auth and create a show route for the library.<br>
-Day 5: Work on CSS to give the website some flair.<br>
-
 ### Work-Flow
 Here is a link to my Trello Board with my work flow.
 https://trello.com/b/hwYaTDf4/game-store
+
+## Updates
+### 4/28/2022
+- Fix bug where the z-index of game container becomes higher than header when hovering over the container.
