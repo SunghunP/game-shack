@@ -49,6 +49,7 @@ async function newGame(req, res) {
 async function create(req, res) {
 	req.body.tags = trimWhiteSpaceAndSplit(req.body.tags);
 	try {
+		if (!req.body.img) req.body.img = '../images/no_Img.png'
 		let game = await Game.create(req.body);
 		res.redirect(`/games/${game._id}`);
 	} catch(err) {
