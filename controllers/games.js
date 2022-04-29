@@ -114,11 +114,11 @@ async function deleteGame(req, res) {
 	}
 };
 
-function trimWhiteSpaceAndSplit(str) {
+function trimWhiteSpaceAndSplit(reqBody) {
 	// get tags from req.body to validate and clean data
-	let tagString = str;
+	let tagString = reqBody;
 	// replace all white spaces with blank string
 	tagString = tagString.replace(/\s/g,'');
-	// create an array by splitting the string by ,
+	// return an array by splitting the string by ','
 	return tagString.split(',');
 };
