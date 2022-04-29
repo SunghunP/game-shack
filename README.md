@@ -103,7 +103,9 @@ const gameSchema = new Schema({
 User model:
 ```
 const userSchema = new Schema({
-	library: [gameSchema]
+	username:	{ type: String, required: true, unique: true },
+	password:	{ type: String, required: true },
+	library:	{ [gameSchema] }
 });
 ```
 
