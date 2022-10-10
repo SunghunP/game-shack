@@ -10,7 +10,7 @@ Game Shack is an e-commerce selling/buying website for games with full CRUD func
 
 ## General Info
 ### Website Link
-https://game-shack-sunghunp.herokuapp.com/
+https://gameshack.onrender.com/
 
 ### Screen shots of the website
 Welcome Page <br/>
