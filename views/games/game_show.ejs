@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<%- include("./partials/head.ejs") %> 
 
 <body id="index-body">
+
 	<%- include("partials/header.ejs") %> 
+
 	<div class="content-wrapper show flex-cntr col">
 		<div class="game-cntr-show flex-cntr">
 			<div class="img-cntr">
@@ -11,10 +14,15 @@
 			</div>
 			<div class="text-cntr-show flex-cntr col">
 				<div class="name-cntr"><h1><%= game.name %> </h1></div>
-				<div class="desc-cntr"><%= game.desc %> </div>
+				<% if (!game.desc) { %>
+					<div class="desc-cntr">Description of <%= game.name %> </div>
+				<% } else { %>
+					<div class="desc-cntr"><%= game.desc %> </div>
+				<% } %>
 				<div class="price-cntr">Price: <%= game.price %> </div>
 				<div class="qty-cntr">Quantity: <%= game.qty %> </div>
 				<div class="tag-cntr">Tags: <%= game.tags %> </div>
+
 			</div>
 		</div>
 		<div class="purchaser flex-cntr" >

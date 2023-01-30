@@ -49,6 +49,7 @@ async function newGame(req, res) {
 async function create(req, res) {
 	req.body.tags = trimWhiteSpaceAndSplit(req.body.tags);
 	try {
+		if (!req.body.img) req.body.img = '../images/no_Img.png'
 		let game = await Game.create(req.body);
 		res.redirect(`/games/${game._id}`);
 	} catch(err) {
@@ -93,7 +94,7 @@ async function update(req, res) {
 		}
 	} else {
 		try {
-			if (!req.body.img) req.body.img = '/images/no_Img.png';
+			if (!req.body.img) req.body.img = '../images/no_Img.png'
 			req.body.tags = trimWhiteSpaceAndSplit(req.body.tags);
 			await Game.findByIdAndUpdate(req.params.id, req.body);
 			res.redirect(`/games/${req.params.id}`);
@@ -114,11 +115,11 @@ async function deleteGame(req, res) {
 	}
 };
 
-function trimWhiteSpaceAndSplit(str) {
+function trimWhiteSpaceAndSplit(reqBody) {
 	// get tags from req.body to validate and clean data
-	let tagString = str;
+	let tagString = reqBody;
 	// replace all white spaces with blank string
 	tagString = tagString.replace(/\s/g,'');
-	// create an array by splitting the string by ,
+	// return an array by splitting the string by ','
 	return tagString.split(',');
 };

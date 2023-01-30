@@ -55,6 +55,8 @@ header {
 	position: -webkit-sticky;
 	top: 0;
 	color: var(--nav-font);
+	/* z index is the stacking level; higher number means it will show up on top of other elements */
+	z-index: 100;
 }
 
 nav {
